@@ -8,6 +8,7 @@
 import UIKit
 import Photos
 import AVFoundation
+import SnapKit
 
 class ViewController: UIViewController {
     
@@ -70,4 +71,86 @@ class ViewController: UIViewController {
         //    }
         
     }
+    
+    @IBAction func showActionSheet(_ sender: UIButton) {
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        let customViewController = UIViewController()
+//        customViewController.view.backgroundColor = UIColor.black
+       
+        //뷰높이 설정
+        let viewHeight:CGFloat = 160.0
+        customViewController.view.snp.makeConstraints{make in
+            make.height.equalTo(viewHeight)
+        }
+        //라벨 생성
+        let label = UILabel()
+        let text = "서비스 이용을 위해\n로그인이 필요합니다."
+        label.text = text
+        label.numberOfLines = 2
+        label.font = UIFont.systemFont(ofSize: 22, weight: .heavy)
+        //행간 설정
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 4
+        // 속성 문자열 생성
+        let attributedText = NSMutableAttributedString(string: text)
+        attributedText.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
+        label.attributedText = attributedText
+        //뷰에 라벨추가
+        customViewController.view.addSubview(label)
+        //라벨 오토레이아웃
+        label.snp.makeConstraints{ make in
+            make.leading.equalToSuperview().offset(24)
+            make.top.equalToSuperview()
+        }
+        
+        //버튼생성
+        //아니오버튼
+        let cancelButton = UIButton(type: .system)
+        cancelButton.setTitle("아니오", for: .normal)
+        cancelButton.setTitleColor(.darkGray, for: .normal)
+        cancelButton.layer.borderWidth = 1
+        cancelButton.layer.borderColor = UIColor.systemGray4.cgColor
+        cancelButton.layer.cornerRadius = 8
+        cancelButton.addAction(UIAction(handler: { _ in
+            // 여기에 버튼이 눌렸을 때 수행할 동작을 추가합니다.
+            self.dismiss(animated: true, completion: nil)
+        }), for: .touchUpInside)
+        
+        //종료하기 버튼
+        let appFinishButton = UIButton(type: .system)
+        appFinishButton.setTitle("종료하기", for: .normal)
+        appFinishButton.backgroundColor = UIColor(red: 79/255, green: 175/255, blue: 166/255, alpha: 1) // RGB #4FAFA6
+        appFinishButton.setTitleColor(.white, for: .normal)
+        appFinishButton.layer.cornerRadius = 8
+        appFinishButton.addAction(UIAction(handler: { _ in
+            // 여기에 버튼이 눌렸을 때 수행할 동작을 추가합니다.
+           print("앱 종료하기")
+        }), for: .touchUpInside)
+        
+        //슈퍼뷰에 버튼 추가
+        customViewController.view.addSubview(cancelButton)
+        customViewController.view.addSubview(appFinishButton)
+        
+        //취소 버튼 제약조건
+        cancelButton.snp.makeConstraints{ make in
+            make.leading.equalTo(label)
+            make.top.equalTo(label.snp.bottom).offset(24)
+            make.width.equalTo(110)
+            make.height.equalTo(50)
+        }
+        //종료하기 버튼 제약조건
+        appFinishButton.snp.makeConstraints{ make in
+            make.leading.equalTo(cancelButton.snp.trailing).offset(8)
+            make.trailing.equalToSuperview().offset(-24).priority(.high)
+            make.height.equalTo(50)
+            make.top.equalTo(label.snp.bottom).offset(24)
+            make.top.equalTo(label.snp.bottom).offset(24)
+        }
+        
+        alert.setValue(customViewController, forKey: "contentViewController")
+     
+        
+        present(alert, animated: true)
+    }
+
 }

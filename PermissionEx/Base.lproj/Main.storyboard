@@ -25,6 +25,15 @@
                                     <action selector="setPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="icy-K2-bzM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUM-zR-nKx">
+                                <rect key="frame" x="109" y="625" width="83" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="액션시트"/>
+                                <connections>
+                                    <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubY-5t-8db"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
