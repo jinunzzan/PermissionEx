@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         }
         //라벨 생성
         let label = UILabel()
-        let text = "서비스 이용을 위해\n로그인이 필요합니다."
+        let text = "해당 앱을\n종료하시겠습니까?"
         label.text = text
         label.numberOfLines = 2
         label.font = UIFont.systemFont(ofSize: 22, weight: .heavy)
@@ -148,8 +148,6 @@ class ViewController: UIViewController {
         }
         
         alert.setValue(customViewController, forKey: "contentViewController")
-     
-        
         present(alert, animated: true)
     }
 
