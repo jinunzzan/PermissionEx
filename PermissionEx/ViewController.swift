@@ -144,6 +144,16 @@ class ViewController: UIViewController {
                }
             present(vc, animated: true)
         }
+    
+    @IBAction func useAni(_ sender: Any) {
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "AnimationViewController") as! AnimationViewController
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: false, completion: nil)
+        
+        
+    }
+    
     }
     
 

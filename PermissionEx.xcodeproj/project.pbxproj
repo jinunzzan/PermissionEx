@@ -10,6 +10,7 @@
 		59BEB2ED2A28239D000F71D8 /* BottomDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEB2EC2A28239D000F71D8 /* BottomDialogViewController.swift */; };
 		59BEB2EF2A283B88000F71D8 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEB2EE2A283B88000F71D8 /* BackgroundViewController.swift */; };
 		59BEB2F12A284E4B000F71D8 /* HalfModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEB2F02A284E4B000F71D8 /* HalfModalPresentationController.swift */; };
+		59BEB2F32A286CC1000F71D8 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEB2F22A286CC1000F71D8 /* AnimationViewController.swift */; };
 		59F0E90B2A26CE8800727BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0E90A2A26CE8800727BD2 /* AppDelegate.swift */; };
 		59F0E90D2A26CE8800727BD2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0E90C2A26CE8800727BD2 /* SceneDelegate.swift */; };
 		59F0E90F2A26CE8800727BD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F0E90E2A26CE8800727BD2 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		59BEB2EC2A28239D000F71D8 /* BottomDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDialogViewController.swift; sourceTree = "<group>"; };
 		59BEB2EE2A283B88000F71D8 /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		59BEB2F02A284E4B000F71D8 /* HalfModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfModalPresentationController.swift; sourceTree = "<group>"; };
+		59BEB2F22A286CC1000F71D8 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		59F0E9072A26CE8800727BD2 /* PermissionEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PermissionEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F0E90A2A26CE8800727BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59F0E90C2A26CE8800727BD2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				59F0E90E2A26CE8800727BD2 /* ViewController.swift */,
 				59BEB2F02A284E4B000F71D8 /* HalfModalPresentationController.swift */,
 				59BEB2EC2A28239D000F71D8 /* BottomDialogViewController.swift */,
+				59BEB2F22A286CC1000F71D8 /* AnimationViewController.swift */,
 				59F0E9102A26CE8800727BD2 /* Main.storyboard */,
 				59F0E9162A26CE8900727BD2 /* Assets.xcassets */,
 				59F0E9182A26CE8900727BD2 /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 				59F0E90B2A26CE8800727BD2 /* AppDelegate.swift in Sources */,
 				59F0E9222A26D8A400727BD2 /* ex.swift in Sources */,
 				59F0E90D2A26CE8800727BD2 /* SceneDelegate.swift in Sources */,
+				59BEB2F32A286CC1000F71D8 /* AnimationViewController.swift in Sources */,
 				59BEB2EF2A283B88000F71D8 /* BackgroundViewController.swift in Sources */,
 				59F0E9152A26CE8800727BD2 /* PermissionEx.xcdatamodeld in Sources */,
 			);
