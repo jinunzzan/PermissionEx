@@ -59,7 +59,7 @@ class BottomDialogViewController: UIViewController {
         negativeButton.layer.borderWidth = 1
         negativeButton.addAction(UIAction(handler: { _ in
             self.dismiss(animated: true){
-//                self.dismissTopViewController() 
+                self.dismissTopViewController()
             }
         }), for: .touchUpInside)
     }

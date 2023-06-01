@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bak-kw-Yx0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -32,51 +33,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljL-73-U9y">
-                                <rect key="frame" x="146" y="400" width="102" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="카메라 사용"/>
-                                <connections>
-                                    <action selector="setPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="icy-K2-bzM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUM-zR-nKx">
-                                <rect key="frame" x="155" y="490" width="83" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="액션시트"/>
-                                <connections>
-                                    <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubY-5t-8db"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-aI-xQd">
-                                <rect key="frame" x="156" y="587" width="83" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="뷰컨으로"/>
-                                <connections>
-                                    <action selector="useVc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9p-re-Nfw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1G-vE-eYt">
-                                <rect key="frame" x="135" y="256" width="83" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="하프모달"/>
-                                <connections>
-                                    <action selector="half:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uf9-Yz-zJo"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="b2w-mF-lU6">
+                                <rect key="frame" x="145.66666666666666" y="244.99999999999997" width="102" height="362.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1G-vE-eYt">
+                                        <rect key="frame" x="9.3333333333333428" y="0.0" width="83" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="하프모달"/>
+                                        <connections>
+                                            <action selector="half:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uf9-Yz-zJo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljL-73-U9y">
+                                        <rect key="frame" x="0.0" y="109.33333333333331" width="102" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="카메라 사용"/>
+                                        <connections>
+                                            <action selector="setPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="icy-K2-bzM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUM-zR-nKx">
+                                        <rect key="frame" x="9.3333333333333428" y="218.66666666666669" width="83" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="액션시트"/>
+                                        <connections>
+                                            <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubY-5t-8db"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-aI-xQd">
+                                        <rect key="frame" x="9.3333333333333428" y="328" width="83" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="뷰컨으로"/>
+                                        <connections>
+                                            <action selector="useVc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9p-re-Nfw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b2w-mF-lU6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vzm-8s-1O6"/>
+                            <constraint firstItem="b2w-mF-lU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ns5-ns-iad"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fM4-bL-AKa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="-27"/>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
         <!--Bottom Dialog View Controller-->
         <scene sceneID="aeQ-Qr-sVT">
