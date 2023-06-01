@@ -121,13 +121,17 @@ class ViewController: UIViewController {
     
     @IBAction func useVc(_ sender: UIButton) {
         let sb = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "BottomDialogViewController") as! BottomDialogViewController
-
-        //맘에드는 효과
-        vc.modalTransitionStyle = .crossDissolve
-        present(vc, animated: true, completion: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "BackgroundViewController") as! BackgroundViewController
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: false, completion: nil)
         
         
+    }
+    
+    
+    
+    @IBAction func half(_ sender: UIButton) {
+     
     }
     
 
