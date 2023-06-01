@@ -64,6 +64,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="하프모달"/>
+                                <connections>
+                                    <action selector="half:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uf9-Yz-zJo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -191,13 +194,91 @@
                     <view key="view" contentMode="scaleToFill" id="Z1T-hz-aDN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMj-bk-Rlp">
+                                <rect key="frame" x="0.0" y="59" width="393" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajk-wB-Az3">
+                                        <rect key="frame" x="24" y="31.999999999999996" width="345" height="52.666666666666657"/>
+                                        <string key="text">해당 앱을 
+종료하시겠습니까?</string>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XY9-Gs-bl0">
+                                        <rect key="frame" x="24" y="108.66666666666664" width="345" height="51.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnU-DX-2I1">
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="51.333333333333336"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="아니오">
+                                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd0-Fi-49k">
+                                                <rect key="frame" x="144" y="0.0" width="201" height="51.333333333333336"/>
+                                                <color key="backgroundColor" red="0.30980393290000002" green="0.68627452850000004" blue="0.65098041299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="종료하기"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XY9-Gs-bl0" firstAttribute="leading" secondItem="VMj-bk-Rlp" secondAttribute="leading" constant="24" id="3pt-PP-89V"/>
+                                    <constraint firstItem="Ajk-wB-Az3" firstAttribute="leading" secondItem="VMj-bk-Rlp" secondAttribute="leading" constant="24" id="GkX-sZ-FpP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ajk-wB-Az3" secondAttribute="trailing" constant="24" id="Ucg-eh-HCJ"/>
+                                    <constraint firstAttribute="height" constant="220" id="c8X-8J-AD7"/>
+                                    <constraint firstAttribute="trailing" secondItem="XY9-Gs-bl0" secondAttribute="trailing" constant="24" id="fwO-J6-QAh"/>
+                                    <constraint firstItem="Ajk-wB-Az3" firstAttribute="top" secondItem="VMj-bk-Rlp" secondAttribute="top" constant="32" id="pfl-yM-nhy"/>
+                                    <constraint firstAttribute="bottom" secondItem="XY9-Gs-bl0" secondAttribute="bottom" constant="60" id="q1c-t8-fwu"/>
+                                    <constraint firstItem="XY9-Gs-bl0" firstAttribute="top" secondItem="Ajk-wB-Az3" secondAttribute="bottom" constant="24" id="ywG-Jc-Ab1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="byl-Yf-aKP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VMj-bk-Rlp" firstAttribute="top" secondItem="byl-Yf-aKP" secondAttribute="top" id="TJ3-pn-3cF"/>
+                            <constraint firstItem="VMj-bk-Rlp" firstAttribute="leading" secondItem="byl-Yf-aKP" secondAttribute="leading" id="iNA-Lm-9hO"/>
+                            <constraint firstAttribute="trailing" secondItem="VMj-bk-Rlp" secondAttribute="trailing" id="oZE-5Z-7nY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="negativeButton" destination="BnU-DX-2I1" id="Ifp-dm-grQ"/>
+                        <outlet property="positiveButton" destination="fd0-Fi-49k" id="Tbl-St-4tO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmL-O1-0bR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2332" y="-140"/>
+            <point key="canvasLocation" x="2405" y="-27"/>
         </scene>
     </scenes>
     <resources>

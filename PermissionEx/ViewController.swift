@@ -131,11 +131,21 @@ class ViewController: UIViewController {
     
     
     @IBAction func half(_ sender: UIButton) {
-     
+        print("하프모달 클릭")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HalfModalPresentationController") as! HalfModalPresentationController
+        if let sheet = vc.sheetPresentationController{
+            sheet.detents = [
+                .custom{ _ in
+                    return 200
+                }
+            ]
+            sheet.prefersGrabberVisible = false
+  
+               }
+            present(vc, animated: true)
+        }
     }
     
-
-}
 
 
 
