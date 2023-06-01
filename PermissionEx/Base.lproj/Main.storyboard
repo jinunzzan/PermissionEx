@@ -8,6 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2uA-Eu-y71">
+            <objects>
+                <navigationController id="Bak-kw-Yx0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bQd-nT-10f">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9El-Z5-o9w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="-27"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -26,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUM-zR-nKx">
-                                <rect key="frame" x="109" y="625" width="83" height="35"/>
+                                <rect key="frame" x="155" y="490" width="83" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="액션시트"/>
@@ -34,19 +47,126 @@
                                     <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubY-5t-8db"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-aI-xQd">
+                                <rect key="frame" x="156" y="587" width="83" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="뷰컨으로"/>
+                                <connections>
+                                    <action selector="useVc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9p-re-Nfw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fM4-bL-AKa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="114" y="-27"/>
         </scene>
+        <!--Bottom Dialog View Controller-->
+        <scene sceneID="aeQ-Qr-sVT">
+            <objects>
+                <viewController restorationIdentifier="BottomDialogViewController" storyboardIdentifier="BottomDialogViewController" id="rMk-CT-Fjn" customClass="BottomDialogViewController" customModule="PermissionEx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zGI-Fl-9Ot">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJ2-fp-pqw">
+                                <rect key="frame" x="0.0" y="632" width="393" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg1-iX-k0F">
+                                        <rect key="frame" x="24" y="31.999999999999996" width="345" height="52.666666666666657"/>
+                                        <string key="text">해당 앱을 
+종료하시겠습니까?</string>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eep-7n-Jo4">
+                                        <rect key="frame" x="24" y="108.66666666666661" width="345" height="51.333333333333329"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK6-rj-dII">
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="51.333333333333336"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="아니오">
+                                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkd-WT-M4q">
+                                                <rect key="frame" x="144" y="0.0" width="201" height="51.333333333333336"/>
+                                                <color key="backgroundColor" red="0.30980393290000002" green="0.68627452850000004" blue="0.65098041299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="종료하기"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="eep-7n-Jo4" firstAttribute="leading" secondItem="iJ2-fp-pqw" secondAttribute="leading" constant="24" id="BeL-QG-Ywe"/>
+                                    <constraint firstAttribute="bottom" secondItem="eep-7n-Jo4" secondAttribute="bottom" constant="60" id="G2b-fD-FF1"/>
+                                    <constraint firstAttribute="trailing" secondItem="eep-7n-Jo4" secondAttribute="trailing" constant="24" id="IZb-zd-bJH"/>
+                                    <constraint firstItem="eep-7n-Jo4" firstAttribute="top" secondItem="Eg1-iX-k0F" secondAttribute="bottom" constant="24" id="Io7-sb-1Gh"/>
+                                    <constraint firstItem="Eg1-iX-k0F" firstAttribute="top" secondItem="iJ2-fp-pqw" secondAttribute="top" constant="32" id="Mxx-sY-Qoc"/>
+                                    <constraint firstAttribute="height" constant="220" id="YXi-Hf-OI2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eg1-iX-k0F" secondAttribute="trailing" constant="24" id="fXs-at-rUf"/>
+                                    <constraint firstItem="Eg1-iX-k0F" firstAttribute="leading" secondItem="iJ2-fp-pqw" secondAttribute="leading" constant="24" id="h0y-kR-xIY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0SN-ac-K2H"/>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0SN-ac-K2H" firstAttribute="trailing" secondItem="iJ2-fp-pqw" secondAttribute="trailing" id="2Pq-bZ-h21"/>
+                            <constraint firstItem="iJ2-fp-pqw" firstAttribute="leading" secondItem="0SN-ac-K2H" secondAttribute="leading" id="SNW-zd-iaI"/>
+                            <constraint firstAttribute="bottom" secondItem="iJ2-fp-pqw" secondAttribute="bottom" id="VA4-j4-xvu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h2j-Il-z2t"/>
+                    <connections>
+                        <outlet property="negativeButton" destination="YK6-rj-dII" id="Sct-gP-5kB"/>
+                        <outlet property="positiveButton" destination="jkd-WT-M4q" id="MCH-gI-QYt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iR-m1-yLD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="-27"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
