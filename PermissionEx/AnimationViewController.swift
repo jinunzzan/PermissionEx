@@ -9,6 +9,7 @@ import UIKit
 
 class AnimationViewController: UIViewController {
     
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var negativeButton: UIButton!
     @IBOutlet weak var positiveButton: UIButton!
@@ -16,6 +17,8 @@ class AnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bottomView.isHidden = true
+        let touchOutSide = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        backView.addGestureRecognizer(touchOutSide)
     }
     override func viewDidAppear(_ animated: Bool) {
         viewAppear()
@@ -33,7 +36,7 @@ class AnimationViewController: UIViewController {
         
     }
     func viewDisppear(){
-        UIView.animate(withDuration: 0.1, delay: 0, animations: { [weak self] in
+        UIView.animate(withDuration: 0.2, delay: 0, animations: { [weak self] in
             guard let self = self else { return }
             let screenHeight = UIScreen.main.bounds.height
             self.bottomView.frame = CGRect(x: 0, y: screenHeight, width: self.bottomView.frame.width, height: self.bottomView.frame.height)
@@ -48,6 +51,10 @@ class AnimationViewController: UIViewController {
         negativeButton.addAction(UIAction(handler: { _ in
             self.viewDisppear()
         }), for: .touchUpInside)
+    }
+    //outsideTouch
+    @objc func viewTapped() {
+        self.viewDisppear()
     }
 
 }

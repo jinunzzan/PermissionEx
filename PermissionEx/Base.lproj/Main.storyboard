@@ -368,17 +368,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8D1-dG-LCh">
+                                <rect key="frame" x="0.0" y="59" width="393" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BYs-U0-q1S"/>
                         <color key="backgroundColor" red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fQp-Xd-fb4" firstAttribute="leading" secondItem="BYs-U0-q1S" secondAttribute="leading" id="5Se-Aq-ceO"/>
+                            <constraint firstItem="8D1-dG-LCh" firstAttribute="leading" secondItem="BYs-U0-q1S" secondAttribute="leading" id="IUO-g9-AQ0"/>
+                            <constraint firstItem="8D1-dG-LCh" firstAttribute="top" secondItem="BYs-U0-q1S" secondAttribute="top" id="SeG-5J-eHB"/>
+                            <constraint firstItem="BYs-U0-q1S" firstAttribute="trailing" secondItem="8D1-dG-LCh" secondAttribute="trailing" id="eC0-eo-EAg"/>
                             <constraint firstAttribute="bottom" secondItem="fQp-Xd-fb4" secondAttribute="bottom" id="sov-Ra-zMd"/>
                             <constraint firstItem="BYs-U0-q1S" firstAttribute="trailing" secondItem="fQp-Xd-fb4" secondAttribute="trailing" id="uI2-R1-7js"/>
+                            <constraint firstItem="fQp-Xd-fb4" firstAttribute="top" secondItem="8D1-dG-LCh" secondAttribute="bottom" id="zUi-HW-6HP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gA0-mZ-wr6"/>
                     <connections>
+                        <outlet property="backView" destination="8D1-dG-LCh" id="zWy-vB-Cdk"/>
                         <outlet property="bottomView" destination="fQp-Xd-fb4" id="EtC-6r-d6A"/>
                         <outlet property="negativeButton" destination="jiI-Vw-ROY" id="vzk-y0-ahu"/>
                         <outlet property="positiveButton" destination="Xcy-qy-TeG" id="N2T-pE-f1J"/>
